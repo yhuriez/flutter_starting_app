@@ -92,8 +92,8 @@ flutter:
 
   assets:
     # Add assets from the images directory to the application.
-    - assets/images/
-    - assets/icons/
+    - assets/images/ # Images are pictures in png of jpeg format
+    - assets/icons/ # Icons are pictures in svg format (used for optimizations)
     - .env
 
 #  fonts:

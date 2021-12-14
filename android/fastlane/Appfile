@@ -1,0 +1,7 @@
+
+ # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
+ // TODO Create secret/fastlane_user_key.json using setup described in documentation above
+json_key_file("secret/fastlane_user_key.json")
+
+// TODO Change package name
+package_name("fr.enlight.flutter_starting_app") # e.g. com.krausefx.app

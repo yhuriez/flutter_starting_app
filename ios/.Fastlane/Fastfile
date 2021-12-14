@@ -1,0 +1,26 @@
+
+default_platform :ios
+
+platform :ios do
+
+  desc "Push new build"
+  lane :push do |options|
+
+    build_app(
+        scheme: "Runner",
+        workspace: "Runner.xcworkspace",
+        export_method: "app-store"
+    )
+
+    app_store_connect_api_key(
+       	key_id: "TODO", // Give key id
+        issuer_id: "TODO", // Give issuer id
+        key_filepath: "./secret/auth_key.p8" // TODO add auth key (see fastlane documentation)
+    )
+    upload_to_testflight(
+      	skip_waiting_for_build_processing: true,
+      	apple_id: "TODO" // Give apple id
+    )
+
+  end
+end

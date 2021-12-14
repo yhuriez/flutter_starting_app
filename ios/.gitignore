@@ -27,6 +27,7 @@ Flutter/flutter_export_environment.sh
 ServiceDefinitions.json
 Runner/GeneratedPluginRegistrant.*
 Podfile.lock
+secret
 
 # Exceptions to above rules.
 !default.mode1v3
@@ -34,4 +35,5 @@ Podfile.lock
 !default.pbxuser
 !default.perspectivev3
 
-/Fastlane/*
+/Fastlane/Appfile
+/Fastlane/Fastfile

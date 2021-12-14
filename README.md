@@ -1,23 +1,17 @@
 # flutter_starting_app
 
-Template app to bootstrap a Flutter app
+Template app to bootstrap a Flutter app.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application that follows the
-[simple app state management
-tutorial](https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple).
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project is a starting point for a Flutter application.
 
 ## Assets
 
 The `assets` directory houses images, fonts, and any other files you want to
 include with your application.
 
-The `assets/images` directory contains [resolution-aware
+The `assets/images` directory can be used for [resolution-aware
 images](https://flutter.dev/docs/development/ui/assets-and-images#resolution-aware).
 
 ## Localisation
@@ -27,3 +21,5 @@ https://plugins.jetbrains.com/plugin/13666-flutter-intl
 
 For VS Code :
 https://marketplace.visualstudio.com/items?itemName=localizely.flutter-intl
+
+Note : this plugin is used instead of the standard method (see https://docs.flutter.dev/development/accessibility-and-localization/internationalization#loading-and-retrieving-localized-values) as it allows dynamic updates (when you write your wording in the desired file, it is immediatly available in the app through `S.of(context).MY_WORDING`)

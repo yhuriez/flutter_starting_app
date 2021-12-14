@@ -96,6 +96,7 @@ flutter:
     - assets/icons/ # Icons are pictures in svg format (used for optimizations)
     - .env
 
+# TODO Define your own font for the app using this documentation: https://docs.flutter.dev/cookbook/design/fonts
 #  fonts:
 #    - family: OpenSans
 #      fonts:

@@ -20,11 +20,10 @@ include with your application.
 The `assets/images` directory contains [resolution-aware
 images](https://flutter.dev/docs/development/ui/assets-and-images#resolution-aware).
 
-## Localization
+## Localisation
 
-This project generates localized messages based on arb files found in
-the `lib/src/localization` directory.
+This project uses "flutter-intl" plugin for Android Studio or VS Code, please install it using the documentation below :
+https://plugins.jetbrains.com/plugin/13666-flutter-intl
 
-To support additional languages, please visit the tutorial on
-[Internationalizing Flutter
-apps](https://flutter.dev/docs/development/accessibility-and-localization/internationalization)
+For VS Code :
+https://marketplace.visualstudio.com/items?itemName=localizely.flutter-intl

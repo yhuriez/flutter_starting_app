@@ -9,17 +9,80 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.12.0 <3.0.0"
 
+# TODO Update dependencies if possible
+
 dependencies:
   flutter:
     sdk: flutter
+
+  # I18n
   flutter_localizations:
     sdk: flutter
+  intl: ^0.17.0
+
+  # Service locator / dependency injection
+  get_it: ^7.2.0
+
+  # State management
+  provider: ^6.0.1
+
+  # Network
+  dio: ^4.0.1
+
+  # Storage
+  hive: ^2.0.4
+  hive_flutter: ^1.1.0
+  flutter_secure_storage: ^5.0.2
+
+  # Logging & Analytics
+  logger: ^1.1.0
+  sentry_flutter: ^6.1.2
+
+  # Dart code management
+  catcher: ^0.6.9 # Exception management
+  json_annotation: ^4.4.0 # Give annotation to simplify data model JSON parsing
+  freezed_annotation: ^1.0.0 # Give additional methods to data classes (copy, equals, sealed classes...)
+  uuid: ^3.0.5 # UUID String generation
+
+  # UI & Widgets
+  styled_text: ^3.0.4
+
+  # Device helpers
+  system_info: ^1.0.1
+
+  # Assets
+  flutter_svg: ^0.23.0+1
+
+  # Security
+  flutter_dotenv: ^5.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^1.0.0
+  test: ^1.16.5
+
+  # Used to mock dependencies in test
+  mockito: ^5.0.16
+
+  # Used to generate Hive adapters for object storage
+  hive_generator: ^1.1.1
+
+  # Give additional methods to data classes (copy, equals, sealed classes...)
+  freezed: ^1.0.2
+
+  # To build with build_runner : flutter packages pub run build_runner build
+  # To watch with build_runner : flutter packages pub run build_runner watch
+  build_runner: ^2.1.5
+
+  # Used with build_runner to generate JSON parsing functions for data model class
+  # annotated with json_annotation
+  json_serializable: ^6.1.1
+
+  # Debug tools
+  flutter_gen: ^4.1.2
+  analyzer: ^2.8.0
+
 
 flutter:
   uses-material-design: true
@@ -30,3 +93,17 @@ flutter:
   assets:
     # Add assets from the images directory to the application.
     - assets/images/
+    - assets/icons/
+    - .env
+
+#  fonts:
+#    - family: OpenSans
+#      fonts:
+#        - asset: assets/fonts/OpenSans-Regular.ttf
+#        - asset: assets/fonts/OpenSans-Italic.ttf
+#          style: italic
+#        - asset: assets/fonts/OpenSans-Bold.ttf
+#          weight: 700
+
+flutter_intl:
+  enabled: true

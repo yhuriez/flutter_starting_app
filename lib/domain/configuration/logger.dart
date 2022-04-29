@@ -1,20 +1,11 @@
 
 
 import 'package:logger/logger.dart';
-import 'package:sentry_flutter/sentry_flutter.dart';
 
-final logger = Logger(output: FzLoggerOutput());
-
-
-class FzLoggerOutput extends LogOutput {
-  @override
-  void output(OutputEvent event) {
-    if(event.level == Level.error) {
-      Sentry.captureMessage(event.lines.join("\n"));
-    }
-
-    for (var line in event.lines) {
-      print(line);
-    }
-  }
-}
+///
+/// A logger instance that can be used to log info and errors everywhere in the application.
+///
+/// Can be connected to crash management systems like Sentry, Crashlytics etc.
+/// (see https://pub.dev/packages/logger)
+///
+final logger = Logger();

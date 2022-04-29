@@ -1,22 +1,25 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_starting_app/views/app_state.dart';
 import 'package:provider/provider.dart';
 
-class AppProviderInitializer extends StatelessWidget {
+///
+/// A class regrouping all states we want to make global to the application
+///
+class AppProviders extends StatelessWidget {
   final Widget child;
 
-  const AppProviderInitializer({Key? key, required this.child})
+  const AppProviders({Key? key, required this.child})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // return MultiProvider(
-    //   providers: [
-    //     // ChangeNotifierProvider(create: (_) => MyState(),)
-    //   ],
-    //   child: child,
-    // );
-    return child;
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AppState(),)
+      ],
+      child: child,
+    );
   }
 }

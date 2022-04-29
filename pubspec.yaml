@@ -9,7 +9,7 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.12.0 <3.0.0"
 
-# TODO Update dependencies if possible
+# TODO Update dependencies if needed
 
 dependencies:
   flutter:
@@ -26,26 +26,16 @@ dependencies:
   # State management
   provider: ^6.0.1
 
-  # Network
-  dio: ^4.0.1
-
-  # Storage
-  hive: ^2.0.4
-  hive_flutter: ^1.1.0
-  flutter_secure_storage: ^5.0.2
-
   # Logging & Analytics
   logger: ^1.1.0
-  sentry_flutter: ^6.1.2
 
   # Dart code management
-  catcher: ^0.6.9 # Exception management
   json_annotation: ^4.4.0 # Give annotation to simplify data model JSON parsing
-  freezed_annotation: ^1.0.0 # Give additional methods to data classes (copy, equals, sealed classes...)
+  freezed_annotation: ^1.0.0 # Give additional methods to make data classes (kotlin) / record (java) (copy, equals, sealed classes...)
   uuid: ^3.0.5 # UUID String generation
 
-  # UI & Widgets
-  styled_text: ^3.0.4
+  # UI / Widgets
+  flutter_screenutil: 5.4.0+1
 
   # Device helpers
   system_info: ^1.0.1
@@ -53,20 +43,12 @@ dependencies:
   # Assets
   flutter_svg: ^0.23.0+1
 
-  # Security
-  flutter_dotenv: ^5.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   test: ^1.16.5
-
-  # Used to mock dependencies in test
-  mockito: ^5.0.16
-
-  # Used to generate Hive adapters for object storage
-  hive_generator: ^1.1.1
 
   # Give additional methods to data classes (copy, equals, sealed classes...)
   freezed: ^1.0.2
@@ -94,7 +76,6 @@ flutter:
     # Add assets from the images directory to the application.
     - assets/images/ # Images are pictures in png of jpeg format
     - assets/icons/ # Icons are pictures in svg format (used for optimizations)
-    - .env
 
 # TODO Define your own font for the app using this documentation: https://docs.flutter.dev/cookbook/design/fonts
 #  fonts:

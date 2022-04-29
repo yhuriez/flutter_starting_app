@@ -1,12 +1,12 @@
+
+
 import 'package:flutter/material.dart';
 
+class AppState extends ChangeNotifier {
 
-class HomeState with ChangeNotifier {
+  // TODO Add some state that is global to the app here
 
-
-  // TODO Add some state that is related to the HomePage widget here
-
-  HomeState() {
+  AppState(){
     init();
   }
 

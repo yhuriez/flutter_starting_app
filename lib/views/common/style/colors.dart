@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 
 // TODO Define main colors
 
+/**
+ * This file defines the main colors that will be used for common widgets in the app.
+ */
+
 const themeBackgroundColor = const Color(0xFFFFFFFF);
 const themeContainerColor = const Color(0xFFEBEBEB);
 const themeBorderColor = const Color(0xFF909090);
@@ -15,8 +19,3 @@ const themeTextColor = const Color(0xFF707070);
 const themeHintTextColor = const Color(0xFF9F9F9F);
 const themeReverseTextColor = themeBackgroundColor;
 const themeErrorTextColor = themeErrorColor;
-
-const themeOverlayColor = const Color(0xCCFFFFFF);
-const themeOverlayTextColor = Colors.black87;
-const themeDarkOverlayColor = const Color(0x88383838);
-const themeDarkOverlayTextColor = Colors.white;

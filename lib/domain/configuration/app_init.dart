@@ -48,7 +48,8 @@ Future<void> initCommons() async {
 ///
 Future<void> initStorage() async {
 
-  sl.registerLazySingletonAsync(() async => ItemStorage.create(1));
+  final itemBox = await ItemStorage.createBox(1);
+  sl.registerLazySingleton(() => ItemStorage(itemBox));
 }
 
 ///

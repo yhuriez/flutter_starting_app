@@ -20,6 +20,10 @@ class App extends StatelessWidget {
     return FutureBuilder(
         future: sl.allReady(),
         builder: (context, snapshot) {
+          if(!snapshot.hasData) {
+            return Container();
+          }
+
           return ScreenUtilInit(
             designSize: getDesignSize(),
             builder: (_) => MaterialApp(

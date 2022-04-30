@@ -12,17 +12,12 @@ class ItemStorage {
 
   final Box<Item> _boxDb;
 
-  ItemStorage._(this._boxDb);
+  ItemStorage(this._boxDb);
 
   static Future<Box<Item>> createBox(int typeId) async {
     Hive.registerAdapter(JsonTypeAdapter<Item>(
         typeId, (json) => Item.fromJson(json), (obj) => obj.toJson()));
     return Hive.openBox<Item>(dbName);
-  }
-  
-  static Future<ItemStorage> create(int typeId) async {
-    final box = await createBox(typeId); 
-    return ItemStorage._(box);
   }
 
   Item insert(Item item) {

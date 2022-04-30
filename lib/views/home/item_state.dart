@@ -41,7 +41,7 @@ class ItemState with ChangeNotifier {
   }
 
   _refreshItems() {
-    _items = _repository.getAll();
+    _items = _repository.getAllLocal();
     notifyListeners();
   }
 }

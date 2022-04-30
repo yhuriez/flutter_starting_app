@@ -13,6 +13,12 @@ class GenerateItemsUseCase {
 
     List<Item> result = [];
 
+    final localItems = _repository.getAllLocal();
+
+    if(localItems.length > count) {
+      return localItems.sublist(0, count);
+    }
+
     for (int index = 0; index < count; index++) {
 
       final item = await _repository.create("Item ${index}");

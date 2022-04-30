@@ -15,7 +15,7 @@ class GenerateItemsUseCase {
 
     final localItems = _repository.getAllLocal();
 
-    if(localItems.length > count) {
+    if(localItems.length >= count) {
       return localItems.sublist(0, count);
     }
 

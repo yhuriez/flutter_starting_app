@@ -26,7 +26,6 @@ class FullScreenTextInputDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: Colors.transparent,
             appBar: createAppBar(context),
             body: _TextInputBody(title, hint, initialValue)));
   }

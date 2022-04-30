@@ -44,7 +44,7 @@ class AppButton extends StatelessWidget {
       loading: loading,
       label: label,
       backgroundColor: themeAccentColor,
-      textColor: themeTextColor,
+      textColor: Colors.white,
       leading: leading,
       trailing: trailing,
     );

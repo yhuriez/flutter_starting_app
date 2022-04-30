@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class AppState extends ChangeNotifier {
 
+  String? connectedUserId;
   // TODO Add some state that is global to the app here
 
   AppState(){

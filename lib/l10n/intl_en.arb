@@ -1,4 +1,9 @@
 {
   "@@locale": "en",
-  "appName": "PLEASE RENAME ME !"
+  "appName": "PLEASE RENAME ME !",
+
+  "actionYes": "Yes",
+  "actionNo": "No",
+  "actionOk": "Ok",
+  "actionCancel": "Cancel"
 }

@@ -59,6 +59,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Yes`
+  String get actionYes {
+    return Intl.message(
+      'Yes',
+      name: 'actionYes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No`
+  String get actionNo {
+    return Intl.message(
+      'No',
+      name: 'actionNo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ok`
+  String get actionOk {
+    return Intl.message(
+      'Ok',
+      name: 'actionOk',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get actionCancel {
+    return Intl.message(
+      'Cancel',
+      name: 'actionCancel',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

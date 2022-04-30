@@ -1,6 +1,7 @@
 
 
 import 'package:flutter_starting_app/domain/api/item_api.dart';
+import 'package:flutter_starting_app/domain/configuration/hive_configuration.dart';
 import 'package:flutter_starting_app/domain/repositories/item_repository.dart';
 import 'package:flutter_starting_app/domain/storage/item_storage.dart';
 import 'package:flutter_starting_app/domain/usecases/generate_items.dart';
@@ -13,6 +14,7 @@ import 'injection.dart';
 ///
 Future<void> initApp() async {
 
+  await initHive();
   await initDI();
 }
 
@@ -46,7 +48,7 @@ Future<void> initCommons() async {
 ///
 Future<void> initStorage() async {
 
-  sl.registerLazySingleton(() => ItemStorage());
+  sl.registerLazySingletonAsync(() async => ItemStorage.create(1));
 }
 
 ///

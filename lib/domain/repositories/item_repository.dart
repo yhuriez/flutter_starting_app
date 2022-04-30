@@ -24,7 +24,7 @@ class ItemRepository {
     return localItem;
   }
 
-  List<Item> getAll() {
+  List<Item> getAllLocal() {
     return _storage.allSorted;
   }
 

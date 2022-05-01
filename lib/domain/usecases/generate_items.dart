@@ -1,6 +1,8 @@
 
-import 'package:flutter_starting_app/domain/repositories/item_repository.dart';
-import 'package:flutter_starting_app/models/item.dart';
+
+
+import '../../models/item.dart';
+import '../repositories/item_repository.dart';
 
 class GenerateItemsUseCase {
 

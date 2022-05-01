@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 const themeBackgroundColor = const Color(0xFFFFFFFF);
 const themeContainerColor = const Color(0xFFEBEBEB);
 const themeBorderColor = const Color(0xFF909090);
-const themeAccentColor = const Color(0xFFda7a36);
+const themeAccentColor = const Color(0xff178ac7);
 const themeErrorColor = const Color(0xFFff4654);
 const themeErrorBackgroundColor = const Color(0xFFffedee);
 

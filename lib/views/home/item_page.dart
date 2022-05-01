@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starting_app/views/common/style/colors.dart';
-import 'package:flutter_starting_app/views/common/style/input_styles.dart';
-import 'package:flutter_starting_app/views/common/style/sizes.dart';
-import 'package:flutter_starting_app/views/common/widgets/dialogs/ful_screen_text_input_dialog.dart';
 import 'package:provider/provider.dart';
 import '../../models/item.dart';
+import '../common/style/colors.dart';
+import '../common/style/input_styles.dart';
+import '../common/style/sizes.dart';
+import '../common/widgets/dialogs/ful_screen_text_input_dialog.dart';
 import 'item_state.dart';
 
 

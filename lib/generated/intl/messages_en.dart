@@ -26,6 +26,44 @@ class MessageLookup extends MessageLookupByLibrary {
         "actionNo": MessageLookupByLibrary.simpleMessage("No"),
         "actionOk": MessageLookupByLibrary.simpleMessage("Ok"),
         "actionYes": MessageLookupByLibrary.simpleMessage("Yes"),
-        "appName": MessageLookupByLibrary.simpleMessage("PLEASE RENAME ME !")
+        "appName": MessageLookupByLibrary.simpleMessage("PLEASE RENAME ME !"),
+        "error_password_not_matching": MessageLookupByLibrary.simpleMessage(
+            "Les mot de passe fournis ne correspondent pas."),
+        "login_connect_button": MessageLookupByLibrary.simpleMessage("Log in"),
+        "login_email_hint": MessageLookupByLibrary.simpleMessage("My email"),
+        "login_email_label": MessageLookupByLibrary.simpleMessage("Email"),
+        "login_error_empty_email":
+            MessageLookupByLibrary.simpleMessage("Please indicate your email."),
+        "login_error_empty_password": MessageLookupByLibrary.simpleMessage(
+            "Please indicate your password."),
+        "login_error_invalid_email": MessageLookupByLibrary.simpleMessage(
+            "Please indicate a valid email."),
+        "login_lost_password_button":
+            MessageLookupByLibrary.simpleMessage("Lost password ?"),
+        "login_password_hint":
+            MessageLookupByLibrary.simpleMessage("My password"),
+        "login_password_label":
+            MessageLookupByLibrary.simpleMessage("Password"),
+        "login_title": MessageLookupByLibrary.simpleMessage("Log in"),
+        "login_to_create_account_button":
+            MessageLookupByLibrary.simpleMessage("Create an account"),
+        "login_to_create_account_label":
+            MessageLookupByLibrary.simpleMessage("No account ?"),
+        "profile_create_confirm_button":
+            MessageLookupByLibrary.simpleMessage("Create my account"),
+        "profile_create_email_hint":
+            MessageLookupByLibrary.simpleMessage("Email"),
+        "profile_create_name_hint":
+            MessageLookupByLibrary.simpleMessage("Name"),
+        "profile_create_password_confirm_hint":
+            MessageLookupByLibrary.simpleMessage("Confirm password"),
+        "profile_create_password_hint":
+            MessageLookupByLibrary.simpleMessage("Password"),
+        "profile_create_title":
+            MessageLookupByLibrary.simpleMessage("Create your account"),
+        "profile_create_to_login_button":
+            MessageLookupByLibrary.simpleMessage("Log in"),
+        "profile_create_to_login_label":
+            MessageLookupByLibrary.simpleMessage("Already have an account ?")
       };
 }

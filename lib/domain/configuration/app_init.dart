@@ -1,11 +1,19 @@
 
 
-import 'package:flutter_starting_app/domain/api/item_api.dart';
-import 'package:flutter_starting_app/domain/repositories/item_repository.dart';
-import 'package:flutter_starting_app/domain/storage/item_storage.dart';
-import 'package:flutter_starting_app/domain/usecases/generate_items.dart';
 import 'package:uuid/uuid.dart';
 
+import '../api/auth_api.dart';
+import '../api/item_api.dart';
+import '../api/user_api.dart';
+import '../repositories/item_repository.dart';
+import '../repositories/user_repository.dart';
+import '../storage/item_storage.dart';
+import '../storage/session_storage.dart';
+import '../storage/user_storage.dart';
+import '../usecases/auth/create_account.dart';
+import '../usecases/auth/current_user.dart';
+import '../usecases/auth/sign_in.dart';
+import '../usecases/generate_items.dart';
 import 'injection.dart';
 
 ///
@@ -46,6 +54,8 @@ Future<void> initCommons() async {
 ///
 Future<void> initStorage() async {
 
+  sl.registerLazySingleton(() => SessionStorage());
+  sl.registerLazySingleton(() => UserStorage());
   sl.registerLazySingleton(() => ItemStorage());
 }
 
@@ -54,6 +64,8 @@ Future<void> initStorage() async {
 ///
 Future<void> initApi() async {
 
+  sl.registerLazySingleton(() => AuthApi(sl()));
+  sl.registerLazySingleton(() => UserApi());
   sl.registerLazySingleton(() => ItemApi(sl()));
 }
 
@@ -63,6 +75,7 @@ Future<void> initApi() async {
 Future<void> initRepositories() async {
 
   sl.registerLazySingleton(() => ItemRepository(sl(), sl()));
+  sl.registerLazySingleton(() => UserRepository(sl(), sl()));
 }
 
 ///
@@ -70,5 +83,11 @@ Future<void> initRepositories() async {
 ///
 Future<void> initUseCases() async {
 
+  // Auth
+  sl.registerLazySingleton(() => SignInUseCase(sl(), sl(), sl()));
+  sl.registerLazySingleton(() => CreateAccountUseCase(sl(), sl(), sl()));
+  sl.registerLazySingleton(() => CurrentUserUseCase(sl(), sl()));
+
+  // Items
   sl.registerLazySingleton(() => GenerateItemsUseCase(sl()));
 }

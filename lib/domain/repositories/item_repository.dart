@@ -1,8 +1,9 @@
 
 
-import 'package:flutter_starting_app/domain/api/item_api.dart';
-import 'package:flutter_starting_app/domain/storage/item_storage.dart';
-import 'package:flutter_starting_app/models/item.dart';
+
+import '../../models/item.dart';
+import '../api/item_api.dart';
+import '../storage/item_storage.dart';
 
 class ItemRepository {
 

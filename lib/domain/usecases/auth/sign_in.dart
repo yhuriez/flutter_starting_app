@@ -17,11 +17,11 @@ class SignInUseCase {
   Future<void> execute({required String email, required String password}) async {
 
     try {
-      final userId = await _authApi.signIn(email, password);
+      await _authApi.signIn(email, password);
 
-      _sessionStorage.saveProperty(SessionStorage.current_user_id_property, userId);
+      final user = await _userRepository.getMe();
 
-      await _userRepository.get(userId);
+      _sessionStorage.saveProperty(SessionStorage.current_user_id_property, user.uid);
 
     } catch (exception) {
       logger.e("Error on signIn", exception);

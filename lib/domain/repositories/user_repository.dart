@@ -12,20 +12,17 @@ class UserRepository {
   UserRepository(this._api, this._storage);
 
 
-  Future<User?> get(String uid) async {
+  Future<User> getMe() async {
+    final remoteUser = await _api.getMe();
 
-    final localUser = _storage.get(uid);
+    _storage.insert(remoteUser);
 
-    if(localUser == null) {
-      final remoteUser = await _api.get(uid);
-
-      return remoteUser;
-    }
-
-    return localUser;
+    return remoteUser;
   }
 
   List<User> getAllLocal() {
     return _storage.allSorted;
   }
+
+
 }

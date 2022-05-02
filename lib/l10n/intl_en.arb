@@ -30,5 +30,9 @@
   "actionOk": "Ok",
   "actionCancel": "Cancel",
 
-  "error_password_not_matching": "Les mot de passe fournis ne correspondent pas."
+  "error_password_not_matching": "Provided password does not match.",
+  "error_user_not_existing": "This user in not registered. Please create an account.",
+  "error_user_not_authorized": "This user is not authorized to log in.",
+  "error_not_authenticated": "You are not authenticated. Please sign in to access this feature.",
+  "error_unknown": "An unknown error has occured. Please try again later."
 }

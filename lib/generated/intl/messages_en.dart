@@ -27,8 +27,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "actionOk": MessageLookupByLibrary.simpleMessage("Ok"),
         "actionYes": MessageLookupByLibrary.simpleMessage("Yes"),
         "appName": MessageLookupByLibrary.simpleMessage("PLEASE RENAME ME !"),
+        "error_not_authenticated": MessageLookupByLibrary.simpleMessage(
+            "You are not authenticated. Please sign in to access this feature."),
         "error_password_not_matching": MessageLookupByLibrary.simpleMessage(
-            "Les mot de passe fournis ne correspondent pas."),
+            "Provided password does not match."),
+        "error_unknown": MessageLookupByLibrary.simpleMessage(
+            "An unknown error has occured. Please try again later."),
+        "error_user_not_authorized": MessageLookupByLibrary.simpleMessage(
+            "This user is not authorized to log in."),
+        "error_user_not_existing": MessageLookupByLibrary.simpleMessage(
+            "This user in not registered. Please create an account."),
         "login_connect_button": MessageLookupByLibrary.simpleMessage("Log in"),
         "login_email_hint": MessageLookupByLibrary.simpleMessage("My email"),
         "login_email_label": MessageLookupByLibrary.simpleMessage("Email"),

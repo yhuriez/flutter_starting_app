@@ -300,11 +300,51 @@ class S {
     );
   }
 
-  /// `Les mot de passe fournis ne correspondent pas.`
+  /// `Provided password does not match.`
   String get error_password_not_matching {
     return Intl.message(
-      'Les mot de passe fournis ne correspondent pas.',
+      'Provided password does not match.',
       name: 'error_password_not_matching',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This user in not registered. Please create an account.`
+  String get error_user_not_existing {
+    return Intl.message(
+      'This user in not registered. Please create an account.',
+      name: 'error_user_not_existing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This user is not authorized to log in.`
+  String get error_user_not_authorized {
+    return Intl.message(
+      'This user is not authorized to log in.',
+      name: 'error_user_not_authorized',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You are not authenticated. Please sign in to access this feature.`
+  String get error_not_authenticated {
+    return Intl.message(
+      'You are not authenticated. Please sign in to access this feature.',
+      name: 'error_not_authenticated',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unknown error has occured. Please try again later.`
+  String get error_unknown {
+    return Intl.message(
+      'An unknown error has occured. Please try again later.',
+      name: 'error_unknown',
       desc: '',
       args: [],
     );

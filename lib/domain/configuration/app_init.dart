@@ -1,5 +1,6 @@
 
 
+import 'package:flutter_starting_app/domain/configuration/env_variables.dart';
 import 'package:uuid/uuid.dart';
 
 import '../api/auth_api.dart';
@@ -29,6 +30,9 @@ Future<void> initApp() async {
 /// Register all dependencies in the dependency injection system
 ///
 Future<void> initDI() async {
+
+  // TODO Use env variables when required
+  final envVariables = await initEnvVariables();
 
   await initCommons();
 

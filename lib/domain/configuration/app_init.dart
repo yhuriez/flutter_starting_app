@@ -58,8 +58,11 @@ Future<void> _initStorage() async {
   final itemBox = await ItemStorage.createBox(1);
   sl.registerLazySingleton(() => ItemStorage(itemBox));
 
-  sl.registerLazySingleton(() => SessionStorage());
-  sl.registerLazySingleton(() => UserStorage());
+  final userBox = await UserStorage.createBox(2);
+  sl.registerLazySingleton(() => UserStorage(userBox));
+
+  final sessionBox = await SessionStorage.createBox();
+  sl.registerLazySingleton(() => SessionStorage(sessionBox));
 }
 
 ///

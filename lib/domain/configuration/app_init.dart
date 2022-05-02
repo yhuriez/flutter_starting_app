@@ -15,6 +15,7 @@ import '../usecases/auth/create_account.dart';
 import '../usecases/auth/current_user.dart';
 import '../usecases/auth/sign_in.dart';
 import '../usecases/generate_items.dart';
+import 'hive_configuration.dart';
 import 'injection.dart';
 
 ///
@@ -54,8 +55,11 @@ Future<void> _initStorage() async {
   final itemBox = await ItemStorage.createBox(1);
   sl.registerLazySingleton(() => ItemStorage(itemBox));
 
-  sl.registerLazySingleton(() => SessionStorage());
-  sl.registerLazySingleton(() => UserStorage());
+  final userBox = await UserStorage.createBox(2);
+  sl.registerLazySingleton(() => UserStorage(userBox));
+
+  final sessionBox = await SessionStorage.createBox();
+  sl.registerLazySingleton(() => SessionStorage(sessionBox));
 }
 
 ///

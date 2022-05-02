@@ -22,33 +22,24 @@ import 'injection.dart';
 ///
 Future<void> initApp() async {
 
-  await initDI();
-}
-
-
-///
-/// Register all dependencies in the dependency injection system
-///
-Future<void> initDI() async {
-
   // TODO Use env variables when required
   final envVariables = await initEnvVariables();
 
-  await initCommons();
+  await _initCommons();
 
-  await initStorage();
+  await _initStorage();
 
-  await initApi();
+  await _initApi(envVariables);
 
-  await initRepositories();
+  await _initRepositories();
 
-  await initUseCases();
+  await _initUseCases();
 }
 
 ///
 /// Register dependencies that can be common to several classes
 ///
-Future<void> initCommons() async {
+Future<void> _initCommons() async {
 
   sl.registerLazySingleton(() => Uuid());
 }
@@ -56,7 +47,7 @@ Future<void> initCommons() async {
 ///
 /// Init storage dependencies
 ///
-Future<void> initStorage() async {
+Future<void> _initStorage() async {
 
   sl.registerLazySingleton(() => SessionStorage());
   sl.registerLazySingleton(() => UserStorage());
@@ -66,7 +57,7 @@ Future<void> initStorage() async {
 ///
 /// Init API dependencies
 ///
-Future<void> initApi() async {
+Future<void> _initApi(EnvVariables envVariables) async {
 
   sl.registerLazySingleton(() => AuthApi(sl()));
   sl.registerLazySingleton(() => UserApi());
@@ -76,7 +67,7 @@ Future<void> initApi() async {
 ///
 /// Init repositories dependencies
 ///
-Future<void> initRepositories() async {
+Future<void> _initRepositories() async {
 
   sl.registerLazySingleton(() => ItemRepository(sl(), sl()));
   sl.registerLazySingleton(() => UserRepository(sl(), sl()));
@@ -85,7 +76,7 @@ Future<void> initRepositories() async {
 ///
 /// Init use cases dependencies
 ///
-Future<void> initUseCases() async {
+Future<void> _initUseCases() async {
 
   // Auth
   sl.registerLazySingleton(() => SignInUseCase(sl(), sl(), sl()));

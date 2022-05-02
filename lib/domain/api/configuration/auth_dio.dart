@@ -1,11 +1,12 @@
 
 import 'package:dio/dio.dart';
-import 'package:flutter_starting_app/domain/api/auth_api.dart';
-import 'package:flutter_starting_app/domain/api/configuration/oauth_storage.dart';
-import 'package:flutter_starting_app/domain/api/responses/token.dart';
-import 'package:flutter_starting_app/models/exceptions/unauthenticated_exception.dart';
+import 'package:dio_smart_retry/dio_smart_retry.dart';
 
+import '../../../models/exceptions/unauthenticated_exception.dart';
+import '../auth_api.dart';
+import '../responses/token.dart';
 import 'base_dio.dart';
+import 'oauth_storage.dart';
 
 class AuthDioWrapper {
   final Dio dioInstance;
@@ -51,6 +52,9 @@ Dio createDioAuthInstance(OAuthStorage oAuthStorage, AuthApi authApi) {
         }
       }
   ));
+
+  // Will retry last request if failed (allows request retry on authentication failed)
+  dio.interceptors.add(RetryInterceptor(dio: dio, retries: 1));
 
   return dio;
 }

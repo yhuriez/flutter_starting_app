@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starting_app/views/common/style/sizes.dart';
 import 'colors.dart';
+import 'sizes.dart';
 
 const themeDefaultRadius = 6.0;
 const themeDefaultElevation = 6.0;

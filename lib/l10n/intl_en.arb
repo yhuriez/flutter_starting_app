@@ -2,8 +2,33 @@
   "@@locale": "en",
   "appName": "PLEASE RENAME ME !",
 
+  "profile_create_title": "Create your account",
+  "profile_create_name_hint": "Name",
+  "profile_create_email_hint": "Email",
+  "profile_create_password_hint": "Password",
+  "profile_create_password_confirm_hint": "Confirm password",
+  "profile_create_confirm_button": "Create my account",
+  "profile_create_to_login_label": "Already have an account ?",
+  "profile_create_to_login_button": "Log in",
+
+  "login_title": "Log in",
+  "login_email_label": "Email",
+  "login_email_hint": "My email",
+  "login_password_label": "Password",
+  "login_password_hint": "My password",
+  "login_connect_button": "Log in",
+  "login_to_create_account_label": "No account ?",
+  "login_to_create_account_button": "Create an account",
+  "login_lost_password_button": "Lost password ?",
+  "login_error_empty_email": "Please indicate your email.",
+  "login_error_invalid_email": "Please indicate a valid email.",
+  "login_error_empty_password": "Please indicate your password.",
+
+
   "actionYes": "Yes",
   "actionNo": "No",
   "actionOk": "Ok",
-  "actionCancel": "Cancel"
+  "actionCancel": "Cancel",
+
+  "error_password_not_matching": "Les mot de passe fournis ne correspondent pas."
 }

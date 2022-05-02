@@ -1,8 +1,9 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:flutter_starting_app/views/app_state.dart';
 import 'package:provider/provider.dart';
+
+import '../../views/app_state.dart';
 
 ///
 /// A class regrouping all states we want to make global to the application

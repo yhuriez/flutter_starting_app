@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starting_app/domain/configuration/injection.dart';
-import 'package:flutter_starting_app/domain/repositories/item_repository.dart';
-import 'package:flutter_starting_app/domain/usecases/generate_items.dart';
-import 'package:flutter_starting_app/models/item.dart';
+
+import '../../domain/configuration/injection.dart';
+import '../../domain/repositories/item_repository.dart';
+import '../../domain/usecases/generate_items.dart';
+import '../../models/item.dart';
 
 
 class ItemState with ChangeNotifier {

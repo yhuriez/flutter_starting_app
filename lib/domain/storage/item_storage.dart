@@ -1,10 +1,9 @@
 
 
 import 'package:hive/hive.dart';
-
-import '../../models/item.dart';
 import '../configuration/hive_configuration.dart';
 
+import '../../models/item.dart';
 
 class ItemStorage {
 

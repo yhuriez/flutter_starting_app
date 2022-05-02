@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_starting_app/domain/usecases/auth/current_user.dart';
+import 'package:flutter_starting_app/views/auth/auth_start_page.dart';
 
 import '../common/utils/device_utils.dart';
 import '../domain/configuration/injection.dart';
@@ -59,6 +61,11 @@ class App extends StatelessWidget {
   }
 
   Route getInitialRoute() {
-    return ItemPage.route();
+    final currentUser = sl<CurrentUserUseCase>().execute();
+    if(currentUser == null) {
+      return AuthStartPage.route();
+    } else {
+      return ItemPage.route();
+    }
   }
 }

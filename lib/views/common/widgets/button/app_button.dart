@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starting_app/views/common/style/colors.dart';
 
+import '../../style/colors.dart';
 import '../../style/input_styles.dart';
 import '../../style/sizes.dart';
 
@@ -85,7 +85,7 @@ class AppButton extends StatelessWidget {
             onClick(context);
           },
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: baseSpace),
+            padding: EdgeInsets.symmetric(vertical: mediumSpace),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -100,23 +100,20 @@ class AppButton extends StatelessWidget {
   Widget _text(BuildContext context) {
     final color = this.textColor ?? Theme.of(context).textTheme.bodyText2?.color ?? Colors.black;
 
-    return SizedBox(
-      height: height ?? 40,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          if (leading != null) this.leading!,
-          (loading)
-              ? CircularProgressIndicator(
-                  color: color,
-                )
-              : Text(label,
-                  style: this.textStyle?.copyWith(color: color) ??
-                      Theme.of(context).textTheme.button?.copyWith(color: color),
-                  textAlign: TextAlign.center),
-          if (trailing != null) this.trailing!
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        if (leading != null) this.leading!,
+        (loading)
+            ? CircularProgressIndicator(
+                color: color,
+              )
+            : Text(label,
+                style: this.textStyle?.copyWith(color: color) ??
+                    Theme.of(context).textTheme.button?.copyWith(color: color),
+                textAlign: TextAlign.center),
+        if (trailing != null) this.trailing!
+      ],
     );
   }
 }

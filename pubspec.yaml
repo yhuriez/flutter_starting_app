@@ -7,7 +7,7 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.16.0 <3.0.0"
 
 # TODO Update dependencies if needed
 
@@ -25,6 +25,9 @@ dependencies:
 
   # State management
   provider: ^6.0.1
+
+  # Network
+  # TODO Place network tools here
 
   # Storage
   hive: ^2.1.0
@@ -47,6 +50,9 @@ dependencies:
 
   # Assets
   flutter_svg: ^0.23.0+1
+
+  # Security
+  flutter_dotenv: ^5.0.2
 
 
 dev_dependencies:

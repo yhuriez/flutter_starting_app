@@ -60,6 +60,206 @@ class S {
     );
   }
 
+  /// `Create your account`
+  String get profile_create_title {
+    return Intl.message(
+      'Create your account',
+      name: 'profile_create_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get profile_create_name_hint {
+    return Intl.message(
+      'Name',
+      name: 'profile_create_name_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get profile_create_email_hint {
+    return Intl.message(
+      'Email',
+      name: 'profile_create_email_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get profile_create_password_hint {
+    return Intl.message(
+      'Password',
+      name: 'profile_create_password_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm password`
+  String get profile_create_password_confirm_hint {
+    return Intl.message(
+      'Confirm password',
+      name: 'profile_create_password_confirm_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create my account`
+  String get profile_create_confirm_button {
+    return Intl.message(
+      'Create my account',
+      name: 'profile_create_confirm_button',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account ?`
+  String get profile_create_to_login_label {
+    return Intl.message(
+      'Already have an account ?',
+      name: 'profile_create_to_login_label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log in`
+  String get profile_create_to_login_button {
+    return Intl.message(
+      'Log in',
+      name: 'profile_create_to_login_button',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log in`
+  String get login_title {
+    return Intl.message(
+      'Log in',
+      name: 'login_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get login_email_label {
+    return Intl.message(
+      'Email',
+      name: 'login_email_label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My email`
+  String get login_email_hint {
+    return Intl.message(
+      'My email',
+      name: 'login_email_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get login_password_label {
+    return Intl.message(
+      'Password',
+      name: 'login_password_label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My password`
+  String get login_password_hint {
+    return Intl.message(
+      'My password',
+      name: 'login_password_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log in`
+  String get login_connect_button {
+    return Intl.message(
+      'Log in',
+      name: 'login_connect_button',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No account ?`
+  String get login_to_create_account_label {
+    return Intl.message(
+      'No account ?',
+      name: 'login_to_create_account_label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create an account`
+  String get login_to_create_account_button {
+    return Intl.message(
+      'Create an account',
+      name: 'login_to_create_account_button',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lost password ?`
+  String get login_lost_password_button {
+    return Intl.message(
+      'Lost password ?',
+      name: 'login_lost_password_button',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please indicate your email.`
+  String get login_error_empty_email {
+    return Intl.message(
+      'Please indicate your email.',
+      name: 'login_error_empty_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please indicate a valid email.`
+  String get login_error_invalid_email {
+    return Intl.message(
+      'Please indicate a valid email.',
+      name: 'login_error_invalid_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please indicate your password.`
+  String get login_error_empty_password {
+    return Intl.message(
+      'Please indicate your password.',
+      name: 'login_error_empty_password',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Yes`
   String get actionYes {
     return Intl.message(
@@ -99,6 +299,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Les mot de passe fournis ne correspondent pas.`
+  String get error_password_not_matching {
+    return Intl.message(
+      'Les mot de passe fournis ne correspondent pas.',
+      name: 'error_password_not_matching',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -107,7 +317,6 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
-      Locale.fromSubtags(languageCode: 'fr'),
     ];
   }
 

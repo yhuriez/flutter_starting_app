@@ -4,8 +4,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_starting_app/views/common/style/sizes.dart';
 import 'colors.dart';
+import 'sizes.dart';
 
 ///
 /// Defines the app light main theme (text style, font, main theme colors etc.)

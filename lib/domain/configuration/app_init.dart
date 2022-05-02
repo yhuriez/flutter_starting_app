@@ -1,9 +1,12 @@
 
 
+import 'package:flutter_starting_app/domain/api/configuration/oauth_storage.dart';
 import 'package:flutter_starting_app/domain/configuration/env_variables.dart';
 import 'package:uuid/uuid.dart';
 
 import '../api/auth_api.dart';
+import '../api/configuration/auth_dio.dart';
+import '../api/configuration/base_dio.dart';
 import '../api/item_api.dart';
 import '../api/user_api.dart';
 import '../repositories/item_repository.dart';
@@ -59,9 +62,18 @@ Future<void> _initStorage() async {
 ///
 Future<void> _initApi(EnvVariables envVariables) async {
 
-  sl.registerLazySingleton(() => AuthApi(sl()));
-  sl.registerLazySingleton(() => UserApi());
-  sl.registerLazySingleton(() => ItemApi(sl()));
+  sl.registerLazySingleton(() => OAuthStorage()..init(
+      clientId: envVariables.get("OAUTH_CLIENT_ID"),
+      clientSecret: envVariables.get("OAUTH_CLIENT_SECRET"),
+      endpoint: envVariables.get("ENDPOINT")
+  ));
+
+  sl.registerLazySingleton(() => BaseDioWrapper(createDioInstance()));
+  sl.registerLazySingleton(() => AuthApi(sl(), sl()));
+
+  sl.registerLazySingleton(() => AuthDioWrapper(createDioAuthInstance(sl(), sl())));
+  sl.registerLazySingleton(() => UserApi(sl(), sl()));
+  sl.registerLazySingleton(() => ItemApi());
 }
 
 ///
@@ -69,7 +81,7 @@ Future<void> _initApi(EnvVariables envVariables) async {
 ///
 Future<void> _initRepositories() async {
 
-  sl.registerLazySingleton(() => ItemRepository(sl(), sl()));
+  sl.registerLazySingleton(() => ItemRepository(sl(), sl(), sl()));
   sl.registerLazySingleton(() => UserRepository(sl(), sl()));
 }
 

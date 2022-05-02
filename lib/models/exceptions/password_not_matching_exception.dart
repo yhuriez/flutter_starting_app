@@ -2,8 +2,8 @@
 
 
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_starting_app/generated/l10n.dart';
 
+import '../../generated/l10n.dart';
 import 'app_exception.dart';
 
 class PasswordNotMatchingException extends AppException{

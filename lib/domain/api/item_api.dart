@@ -1,8 +1,6 @@
 
 
 
-import 'package:uuid/uuid.dart';
-
 import '../../models/item.dart';
 
 ///
@@ -10,18 +8,14 @@ import '../../models/item.dart';
 ///
 class ItemApi {
 
-  final Uuid _uuid;
-
-
   Map<String, Item> _items = {};
 
-  ItemApi(this._uuid);
+  ItemApi();
 
-  Future<Item> post(String value) async {
-    final uid = _uuid.v4();
-    final item = Item(uid: uid, updatedAt: DateTime.now(), value: value);
-    _items[uid] = item;
-    return item;
+  Future<Item> post(Item item) async {
+    final newItem = item.copyWith(value: item.value);
+    _items[item.uid] = newItem;
+    return newItem;
   }
 
   Future<Item> put(Item item) async {

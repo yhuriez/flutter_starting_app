@@ -1,6 +1,8 @@
 
 
 
+import 'package:uuid/uuid.dart';
+
 import '../../models/item.dart';
 import '../api/item_api.dart';
 import '../storage/item_storage.dart';
@@ -9,8 +11,9 @@ class ItemRepository {
 
   final ItemApi _api;
   final ItemStorage _storage;
+  final Uuid _uuid;
 
-  ItemRepository(this._api, this._storage);
+  ItemRepository(this._api, this._storage, this._uuid);
 
   Future<Item?> get(String uid) async {
 
@@ -31,7 +34,11 @@ class ItemRepository {
 
   Future<Item> create(String value) async {
 
-    final remoteItem = await _api.post(value);
+    final remoteItem = await _api.post(Item(
+      uid: _uuid.v4(),
+      updatedAt: DateTime.now(),
+      value:  value
+    ));
 
     _storage.insert(remoteItem);
 

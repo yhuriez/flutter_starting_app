@@ -73,10 +73,6 @@ dev_dependencies:
   # annotated with json_annotation
   json_serializable: ^6.1.1
 
-  # Debug tools
-  flutter_gen: ^4.1.2
-  analyzer: ^2.8.0
-
 
 flutter:
   uses-material-design: true

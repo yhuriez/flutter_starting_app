@@ -18,6 +18,7 @@ import '../usecases/auth/create_account.dart';
 import '../usecases/auth/current_user.dart';
 import '../usecases/auth/sign_in.dart';
 import '../usecases/generate_items.dart';
+import 'hive_configuration.dart';
 import 'injection.dart';
 
 ///
